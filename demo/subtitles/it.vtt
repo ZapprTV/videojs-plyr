@@ -1,0 +1,14 @@
+﻿WEBVTT
+
+00:00:00.001 --> 00:00:07.501
+Ecco come appaiono i sottotitoli in videojs-plyr.
+(tranne per il font, quello lo decidi tu)
+
+00:00:07.502 --> 00:00:15.002
+Sono supportati anche
+i sottotitoli <b>in grassetto</b>,
+<i>in corsivo</i> e <u>sottolineati</u>.
+
+00:00:15.003 --> 00:00:20.003
+Questo è quanto.
+Adesso goditi Big Buck Bunny.

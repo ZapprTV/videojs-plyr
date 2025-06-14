@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@8.23.3/dist/video-js.min.css" />
+        <link rel="stylesheet" href="/css/videojs-plyr.css">
+        <style>
+            @font-face {
+                font-family: "Fustat";
+                src: url("demo/fustat.woff2");
+            }
+            html {
+                width: 100%;
+                height: 100%;
+                font-family: "Fustat";
+                font-weight: 600;
+                color: #4a5764;
+            }
+            body {
+                margin: 0;
+                background: linear-gradient(to left top,#e0f6ff,#f5fcff);
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .video-js {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16 / 9;
+                border-radius: 0.75rem;
+                box-shadow: 0 .5px .6px hsl(197deg 32% 65%/.36),0 1.7px 1.9px -.8px hsl(197deg 32% 65%/.36),0 4.3px 4.8px -1.7px hsl(197deg 32% 65%/.36),-.1px 10.6px 11.9px -2.5px hsl(197deg 32% 65%/.36);
+                margin-right: 2rem;
+            }
+            a {
+                color: #00b2ff;
+                display: inline-flex;
+            }
+            header {
+                margin-left: 2rem;
+                display: flex;
+                flex-direction: column;
+            }
+            header img {
+                user-select: none;
+                pointer-events: none;
+            }
+            header span {
+                margin: 1rem 0;
+            }
+            main {
+                display: flex;
+                flex: 1;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                max-width: 1440px;
+                gap: 4vw;
+            }
+            .button {
+                background: #00b2ff;
+                color: white;
+                text-decoration: none;
+                padding: 0.75em 1em;
+                border-radius: 0.25em;
+                font-weight: 800;
+                font-size: 1.25em;
+                user-select: none;
+            }
+            .button:before {
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23fff' d='M20 10.25q0 3.351-1.908 6.027t-4.928 3.703q-.352.068-.514-.093a.54.54 0 0 1-.163-.4V16.67q0-1.295-.677-1.895a9 9 0 0 0 1.335-.24q.591-.16 1.223-.52a3.7 3.7 0 0 0 1.055-.888q.423-.528.69-1.402t.267-2.008q0-1.616-1.028-2.75q.48-1.214-.105-2.723q-.364-.12-1.054.147a7 7 0 0 0-1.198.587l-.495.32a9 9 0 0 0-2.5-.346a9 9 0 0 0-2.5.347a12 12 0 0 0-.553-.36q-.345-.214-1.088-.514q-.741-.3-1.12-.18q-.572 1.507-.09 2.722q-1.03 1.134-1.03 2.75q0 1.134.268 2.002q.267.867.683 1.401a3.5 3.5 0 0 0 1.048.894q.632.36 1.224.52q.593.162 1.335.241q-.52.48-.638 1.375a2.5 2.5 0 0 1-.586.2a3.6 3.6 0 0 1-.742.067q-.43 0-.853-.287q-.423-.288-.723-.834a2.1 2.1 0 0 0-.631-.694q-.384-.267-.645-.32l-.26-.04q-.273 0-.378.06t-.065.153a.7.7 0 0 0 .117.187a1 1 0 0 0 .17.16l.09.066q.287.135.567.508q.28.374.41.68l.13.307q.17.507.574.821q.404.315.872.4q.468.087.905.094q.436.006.723-.047l.299-.053q0 .507.007 1.188l.006.72q0 .24-.17.4q-.168.162-.52.094q-3.021-1.028-4.928-3.703Q0 13.6 0 10.25q0-2.79 1.341-5.145a10.1 10.1 0 0 1 3.64-3.73A9.6 9.6 0 0 1 10 0a9.6 9.6 0 0 1 5.02 1.375a10.1 10.1 0 0 1 3.639 3.73Q20 7.461 20 10.25'%3E%3C/path%3E%3C/svg%3E");
+                width: 1.75rem;
+                height: 1.75rem;
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: 75%;
+                margin-right: 0.25rem;
+            }
+            footer {
+                background: #242424;
+                color: white;
+                text-align: center;
+                padding: 1rem 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.333333rem;
+            }
+            footer img {
+                height: 1rem;
+            }
+            footer:before {
+                content: "";
+                width: 8px;
+                height: 16px;
+                position: absolute;
+                bottom: 54.8px;
+                background-color: transparent;
+                border-top-left-radius: 8px;
+                box-shadow: 0 -8px 0 0 #242424;
+                transform: rotate(180deg) rotateY(180deg);
+                left: 0;
+            }
+            footer:after {
+                content: "";
+                width: 8px;
+                height: 16px;
+                position: absolute;
+                bottom: 54.8px;
+                background-color: transparent;
+                border-top-left-radius: 8px;
+                box-shadow: 0 -8px 0 0 #242424;
+                transform: rotate(180deg);
+                right: 0;
+            }
+            aside {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                opacity: 0.75;
+            }
+            .active {
+                text-decoration: none;
+                cursor: auto;
+                pointer-events: none;
+                color: white;
+                font-weight: 700;
+            }
+            @media screen and (prefers-color-scheme: dark) {
+                body {
+                    background: linear-gradient(to left top, #00161f, #00070a);
+                    color: white;
+                }
+                .video-js {
+                    box-shadow: 0 .5px .6px hsl(197deg 32% 35%/.36),0 1.7px 1.9px -.8px hsl(197deg 32% 35%/.36),0 4.3px 4.8px -1.7px hsl(197deg 32% 35%/.36),-.1px 10.6px 11.9px -2.5px hsl(197deg 32% 35%/.36);
+                }
+            }
+            @media screen and (max-width: 100vh) {
+                main {
+                    flex-direction: column;
+                }
+                header, .video-js {
+                    margin: 0;
+                    width: calc(100% - 4rem);
+                    text-align: center;
+                }
+                header {
+                    margin-bottom: 2rem;
+                }
+                .video-js {
+                    font-size: 0.8em !important;
+                }
+            }
+        </style>
+        <style id="lang-it" media="not all">
+            :root {
+                --videojs-plyr-quality-text: "Qualità";
+                --videojs-plyr-captions-text: "Sottotitoli";
+                --videojs-plyr-audiotracks-text: "Traccia audio";
+                --videojs-plyr-disabled-text: "Disattivati";
+                --videojs-plyr-settings-text: "Impostazioni";
+            }
+        </style>
+        <title>videojs-plyr</title>
+    </head>
+    <body>
+        <aside>
+            <a href="#lang=en" class="active">English</a> - <a href="#lang=it">Italiano</a>
+        </aside>
+        <main>
+            <header>
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="logo-dark.svg" />
+                    <source media="(prefers-color-scheme: light)" srcset="logo-light.svg" />
+                    <img alt="videojs-plyr logo" src="logo-light.svg" width="100%" />
+                </picture>
+                <div>
+                    <span data-it-text="Una skin per" data-en-text="A skin for">A skin for</span> <a href="https://videojs.com" target="_blank">Video.js</a> <span data-it-text="che lo fa sembrare" data-en-text="that makes it look like">that makes it look like</span> <a href="https://plyr.io" target="_blank">Plyr</a>.
+                </div>
+                <span>
+                    <b data-it-text="Seleziona un video:" data-en-text="Select a video:">Select a video:</b>
+                    <br>
+                    <input type="radio" id="bbb" name="video" checked>
+                    <label for="bbb">Big Buck Bunny</label>
+                    <br>
+                    <input type="radio" id="bipbop" name="video">
+                    <label for="bipbop">BipBop</label>
+                </span>
+                <div>
+                    <a href="https://github.com/ZapprTV/videojs-plyr" class="button" data-it-text="Scarica su GitHub" data-en-text="Download on GitHub">Download on GitHub</a>
+                </div>
+            </header>
+            <video class="video-js vjs-theme-plyr" id="video" controls poster="demo/poster.png">
+                <source src="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" type="application/x-mpegURL">
+                <track kind="subtitles" label="English" srclang="en" src="demo/subtitles/en.vtt" />
+                <track kind="subtitles" label="Italiano" srclang="it" src="demo/subtitles/it.vtt" />
+            </video>
+        </main>
+        <footer>
+            <span data-it-text="Un'ottima idea di" data-en-text="A great idea by">A great idea by</span> <a href="https://francescoro.si" target="_blank">Francesco Rosi</a> <span data-it-text="per" data-en-text="for">for</span> <a href="https://github.com/ZapprTV/Zappr" target="_blank"><img src="demo/zappr.svg" alt="Zappr logo"></a>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/video.js@8.23.3/dist/video.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-quality-menu@1.0.4/dist/videojs-contrib-quality-menu.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/videojs-sprite-thumbnails@2.2.3/dist/videojs-sprite-thumbnails.min.js"></script>
+        <script>
+            const player = videojs("video");
+            player.qualityMenu();
+            player.spriteThumbnails({
+                url: "demo/thumbnails/sprite_{index}.jpg",
+                rows: 10,
+                columns: 10,
+                width: 284,
+                height: 160,
+                idxTag(index) {
+                    return index;
+                }
+            });
+
+            const languageHandler = () => {
+                const params = new URLSearchParams(window.location.hash.slice(1));
+                if (params.get("lang") === "en" || params.get("lang") === "it") {
+                    document.querySelector(`aside a[href="${window.location.hash}"]`).classList.add("active");
+                    document.querySelector(`aside a:not([href="${window.location.hash}"])`).classList.remove("active");
+                    document.querySelectorAll(`[data-${params.get("lang")}-text]`).forEach(el => {
+                        el.innerText = el.dataset[`${params.get("lang")}Text`];
+                    });
+                    document.querySelector(".button").href = `https://github.com/ZapprTV/videojs-plyr${params.get("lang") === "it" ? "/blob/main/README-it.md" : ""}`;
+                    document.querySelector("#lang-it").media = params.get("lang") === "it" ? "" : "not all";
+                };
+            }
+            window.addEventListener("hashchange", () => languageHandler());
+            languageHandler();
+
+            document.querySelectorAll("input").forEach(el => {
+                el.addEventListener("click", e => {
+                    switch (e.target.id) {
+                        case "bbb":
+                            player.poster("demo/poster.png");
+                            player.src({
+                                src: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+                                type: "application/x-mpegURL"
+                            });
+                            player.spriteThumbnails({
+                                url: "demo/thumbnails/sprite_{index}.jpg",
+                                rows: 10,
+                                columns: 10,
+                                width: 284,
+                                height: 160,
+                                idxTag(index) {
+                                    return index;
+                                }
+                            });
+                            player.addRemoteTextTrack({
+                                src: "demo/subtitles/en.vtt",
+                                kind: "subtitles",
+                                srclang: "en",
+                                label: "English"
+                            });
+                            player.addRemoteTextTrack({
+                                src: "demo/subtitles/it.vtt",
+                                kind: "subtitles",
+                                srclang: "it",
+                                label: "Italiano"
+                            });
+                            player.play();
+                            break;
+                    
+                        case "bipbop":
+                            player.poster("");
+                            do {
+                                player.textTracks().tracks_.forEach(track => {
+                                    player.removeRemoteTextTrack(track);
+                                });
+                            } while (player.textTracks().tracks_.length > 0);
+                            player.src({
+                                src: "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
+                                type: "application/x-mpegURL",
+                                spriteThumbnails: {}
+                            });
+                            player.play();
+                            break;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
