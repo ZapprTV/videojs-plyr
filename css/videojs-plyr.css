@@ -497,52 +497,52 @@
 .vjs-theme-plyr .vjs-progress-control {
     min-width: 0 !important;
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -286px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -286px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% + 8px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -285px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -285px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% + 7px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -284px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -284px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% + 6px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -283px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -283px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% + 5px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -282px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -282px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% + 4px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -281px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -281px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% + 3px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -280px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -280px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% + 2px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -279px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -279px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% + 1px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$=" right: 0px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*=" right: 0px;"], .vjs-time-tooltip[style*="right: 0px; "]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% - 8px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -1px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -1px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% - 7px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -2px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -2px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% - 6px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -3px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -3px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% - 5px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -4px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -4px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% - 4px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -5px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -5px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% - 3px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -6px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -6px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% - 2px));
 }
-.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style$="right: -7px;"]) .vjs-mouse-display:before {
+.vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -7px;"]) .vjs-mouse-display:before {
     transform: translateX(calc(-50% - 1px));
 }
 
