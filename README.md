@@ -40,7 +40,7 @@ npm install videojs-plyr
 <link rel="stylesheet" href="node_modules/videojs-plyr/css/videojs-plyr.min.css">
 ```
 
-Alternatively, you can import it directly via a CDN like UNPKG:
+Alternatively, you can import it directly via a CDN like jsDelivr:
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/videojs-plyr/css/videojs-plyr.min.css">
 ```
