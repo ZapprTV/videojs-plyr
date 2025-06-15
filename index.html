@@ -164,8 +164,9 @@
                 --videojs-plyr-quality-text: "Qualità";
                 --videojs-plyr-captions-text: "Sottotitoli";
                 --videojs-plyr-audiotracks-text: "Traccia audio";
-                --videojs-plyr-disabled-text: "Disattivati";
+                --videojs-plyr-subtitles-disabled-text: "Disattivati";
                 --videojs-plyr-settings-text: "Impostazioni";
+                --videojs-plyr-playback-speed-text: "Velocità";
             }
         </style>
         <title>videojs-plyr</title>
@@ -210,7 +211,16 @@
         <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-quality-menu@1.0.4/dist/videojs-contrib-quality-menu.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/videojs-sprite-thumbnails@2.2.3/dist/videojs-sprite-thumbnails.min.js"></script>
         <script>
-            const player = videojs("video");
+            const player = videojs("video", {
+                playbackRates: [0.25, 0.5, 1, 1.25, 1.5, 2, 4],
+                enableSmoothSeeking: true,
+                controlBar: {
+                    skipButtons: {
+                        backward: 5,
+                        forward: 5
+                    }
+                }
+            });
             player.qualityMenu();
             player.spriteThumbnails({
                 url: "demo/thumbnails/sprite_{index}.jpg",

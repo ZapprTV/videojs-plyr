@@ -38,11 +38,10 @@
 .vjs-theme-plyr .vjs-control:not(.vjs-time-control) {
     height: 2em !important;
     width: 2em;
-    margin: auto 4px;
+    margin: auto 2px;
 }
 .vjs-theme-plyr .vjs-play-control {
     margin: auto !important;
-    margin-right: 4px !important;
 }
 .vjs-theme-plyr .vjs-volume-bar.vjs-slider {
     margin: auto .45em;
@@ -213,6 +212,7 @@
         -ms-transform: translateY(10px) scale(.8);
             transform: translateY(10px) scale(.8);
     background: transparent !important;
+    bottom: -6px !important;
 }
 .vjs-theme-plyr .vjs-mouse-display .vjs-time-tooltip {
     font-size: 13px !important;
@@ -358,6 +358,7 @@
     -webkit-transition: 200ms ease-in-out;
     -moz-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
+    min-width: 6em;
 }
 .vjs-theme-plyr .vjs-menu-button-popup.vjs-hover .vjs-menu {
     visibility: hidden;
@@ -396,6 +397,7 @@
         -ms-transform: translateX(-33.33%);
             transform: translateX(-33.33%);
     font-size: 13px;
+    min-width: 8em;
 }
 .vjs-theme-plyr .vjs-menu-content:before {
     cursor: default;
@@ -645,6 +647,7 @@
     z-index: 0;
 }
 .vjs-theme-plyr .vjs-progress-control {
+    margin-left: 8px !important;
     min-width: 0 !important;
 }
 .vjs-theme-plyr .vjs-progress-control:has(.vjs-time-tooltip[style*="right: -286px;"]) .vjs-mouse-display:before {
@@ -743,6 +746,52 @@
         -ms-transform: translateX(calc(-50% - 1px));
             transform: translateX(calc(-50% - 1px));
 }
+.vjs-theme-plyr .vjs-playback-rate-value {
+    line-height: 2.75;
+    font-size: 0.75em;
+    z-index: 9;
+}
+.vjs-theme-plyr .vjs-skip-backward-5 .vjs-icon-placeholder:before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='438' height='785' viewBox='0 0 438 785' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M123.893 436.227H332.115V505.981H193.3V575.736H262.708C281.116 575.736 298.77 583.085 311.786 596.167C324.803 609.248 332.115 626.991 332.115 645.491V715.245C332.115 753.959 301.229 785 262.708 785H123.893V715.245H262.708V645.491H123.893V436.227Z' fill='white'/%3E%3Cpath d='M246.375 150.043L438 0V389L246.375 238.957V389L0 194.5L246.375 0V150.043Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.vjs-theme-plyr .vjs-skip-forward-5 .vjs-icon-placeholder:before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='438' height='785' viewBox='0 0 438 785' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M123.893 436.227H332.115V505.981H193.3V575.736H262.708C281.116 575.736 298.77 583.085 311.786 596.167C324.803 609.248 332.115 626.991 332.115 645.491V715.245C332.115 753.959 301.229 785 262.708 785H123.893V715.245H262.708V645.491H123.893V436.227Z' fill='white'/%3E%3Cpath d='M191.625 150.043L0 0V389L191.625 238.957V389L438 194.5L191.625 0V150.043Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.vjs-theme-plyr .vjs-skip-backward-10 .vjs-icon-placeholder:before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='438' height='785' viewBox='0 0 438 785' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M246.375 150.043L438 0V389L246.375 238.957V389L0 194.5L246.375 0V150.043Z' fill='white'/%3E%3Cpath d='M146 436V785H73V505.8H0V436H146ZM438 505.8V715.2C438 753.939 405.515 785 365 785H292C272.639 785 254.071 777.646 240.381 764.556C226.691 751.466 219 733.712 219 715.2V505.8C219 487.288 226.691 469.534 240.381 456.444C254.071 443.354 272.639 436 292 436H365C384.361 436 402.929 443.354 416.619 456.444C430.309 469.534 438 487.288 438 505.8ZM292 505.8V715.2H365V505.8H292Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.vjs-theme-plyr .vjs-skip-forward-10 .vjs-icon-placeholder:before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='438' height='785' viewBox='0 0 438 785' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M191.625 150.043L0 0V389L191.625 238.957V389L438 194.5L191.625 0V150.043Z' fill='white'/%3E%3Cpath d='M146 436V785H73V505.8H0V436H146ZM438 505.8V715.2C438 753.939 405.515 785 365 785H292C272.639 785 254.071 777.646 240.381 764.556C226.691 751.466 219 733.712 219 715.2V505.8C219 487.288 226.691 469.534 240.381 456.444C254.071 443.354 272.639 436 292 436H365C384.361 436 402.929 443.354 416.619 456.444C430.309 469.534 438 487.288 438 505.8ZM292 505.8V715.2H365V505.8H292Z' fill='white'/%3E%3C/svg%3E%0A");    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.vjs-theme-plyr .vjs-skip-backward-30 .vjs-icon-placeholder:before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='438' height='785' viewBox='0 0 438 785' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M246.375 150.043L438 0V389L246.375 238.957V389L0 194.5L246.375 0V150.043Z' fill='white'/%3E%3Cpath d='M209.571 715.2C209.571 733.712 202.211 751.466 189.111 764.556C176.01 777.646 158.242 785 139.714 785H0V715.2H139.714V645.4H69.8571V575.6H139.714V505.8H0V436H139.714C158.242 436 176.01 443.354 189.111 456.444C202.211 469.534 209.571 487.288 209.571 505.8V558.15C209.571 572.034 204.051 585.349 194.226 595.167C184.4 604.985 171.074 610.5 157.179 610.5C171.074 610.5 184.4 616.015 194.226 625.833C204.051 635.651 209.571 648.966 209.571 662.85V715.2Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M437.571 505.8V715.2C437.571 753.939 406.485 785 367.714 785H297.857C279.33 785 261.561 777.646 248.461 764.556C235.36 751.466 228 733.712 228 715.2V505.8C228 487.288 235.36 469.534 248.461 456.444C261.561 443.354 279.33 436 297.857 436H367.714C386.242 436 404.01 443.354 417.111 456.444C430.211 469.534 437.571 487.288 437.571 505.8ZM297.857 715.2V505.8H367.714V715.2H297.857Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.vjs-theme-plyr .vjs-skip-forward-30 .vjs-icon-placeholder:before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='438' height='785' viewBox='0 0 438 785' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M191.625 150.043L0 0V389L191.625 238.957V389L438 194.5L191.625 0V150.043Z' fill='white'/%3E%3Cpath d='M209.571 715.2C209.571 733.712 202.211 751.466 189.111 764.556C176.01 777.646 158.242 785 139.714 785H0V715.2H139.714V645.4H69.8571V575.6H139.714V505.8H0V436H139.714C158.242 436 176.01 443.354 189.111 456.444C202.211 469.534 209.571 487.288 209.571 505.8V558.15C209.571 572.034 204.051 585.349 194.226 595.167C184.4 604.985 171.074 610.5 157.179 610.5C171.074 610.5 184.4 616.015 194.226 625.833C204.051 635.651 209.571 648.966 209.571 662.85V715.2Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M437.571 505.8V715.2C437.571 753.939 406.485 785 367.714 785H297.857C279.33 785 261.561 777.646 248.461 764.556C235.36 751.466 228 733.712 228 715.2V505.8C228 487.288 235.36 469.534 248.461 456.444C261.561 443.354 279.33 436 297.857 436H367.714C386.242 436 404.01 443.354 417.111 456.444C430.211 469.534 437.571 487.288 437.571 505.8ZM297.857 715.2V505.8H367.714V715.2H297.857Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .vjs-theme-plyr .vjs-quality-menu-wrapper .vjs-menu-content:before {
     content: "Quality";
@@ -758,9 +807,13 @@
 }
 .vjs-theme-plyr .vjs-subs-caps-button .vjs-menu.vjs-lock-showing .vjs-menu-item:not(.vjs-texttrack-settings):not(.vjs-subtitles-menu-item):not(.vjs-captions-menu-item) .vjs-menu-item-text:before {
     content: "Disabled";
-    content: var(--videojs-plyr-disabled-text, "Disabled");
+    content: var(--videojs-plyr-subtitles-disabled-text, "Disabled");
 }
 .vjs-theme-plyr .vjs-subs-caps-button .vjs-menu.vjs-lock-showing .vjs-menu-item.vjs-texttrack-settings .vjs-menu-item-text:before {
     content: "Settings";
     content: var(--videojs-plyr-settings-text, "Settings");
+}
+.vjs-theme-plyr .vjs-playback-rate .vjs-menu-content:before {
+    content: "Speed";
+    content: var(--videojs-plyr-playback-speed-text, "Speed");
 }

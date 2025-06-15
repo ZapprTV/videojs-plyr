@@ -50,16 +50,38 @@ Then, to use it, simply add a `vjs-theme-plyr` class to your Video.js element:
 <video class="video-js vjs-theme-plyr"></video>
 ```
 
-Finally, there are some menu items/titles you might want to translate into other languages. To do that, simply change the value of these CSS variables:
+Now, there are some menu items/titles you might want to translate into other languages. To do that, simply change the value of these CSS variables:
 ```css
 --videojs-plyr-quality-text: "Quality";
 --videojs-plyr-captions-text: "Captions";
 --videojs-plyr-audiotracks-text: "Audio track";
---videojs-plyr-disabled-text: "Disabled";
+--videojs-plyr-subtitles-disabled-text: "Disabled";
 --videojs-plyr-settings-text: "Settings";
+--videojs-plyr-playback-speed-text: "Speed";
 ```
 
-And that's it!
+Finally, if you're using Video.js version 8.9.0 or newer, I recommend enabling the option `enableSmoothSeeking` by setting it to `true`. This will make it so, when clicking and dragging on the progress bar, the playhead will follow your mouse smoothly, instead of doing so choppily like it does by default.
+
+You can do so while initializing the player:
+```js
+videojs("video", {
+    enableSmoothSeeking: true,
+});
+```
+Or programmatically:
+```js
+let player = videojs("video");
+player.options({ enableSmoothSeeking: true });
+```
+
+<br>
+<div align="center"><i>Without enableSmoothSeeking</i></div>
+<img src="seeking.gif">
+<br><br>
+<div align="center"><i>With enableSmoothSeeking</i></div>
+<img src="smoothseeking.gif">
+<br><br>
+<b>And that's it!</b>
 
 ## Variants
 The `css` folder contains 4 CSS files, those being the normal and "legacy" versions of the library, in both unminified and minified formats. The legacy version has way better support for old browsers, but is a bit heavier (because it's made with postcss-preset-env set to a Browserslist query of `> 0%`).

@@ -1,6 +1,6 @@
 {
   "name": "videojs-plyr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A skin for Video.js that makes it look like Plyr.",
   "main": "css/videojs-plyr.min.css",
   "scripts": {

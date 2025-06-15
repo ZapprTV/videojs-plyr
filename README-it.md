@@ -50,16 +50,38 @@ Poi, per usarlo, basta aggiungere la class `vjs-theme-plyr` al tuo elemento Vide
 <video class="video-js vjs-theme-plyr"></video>
 ```
 
-Finalmente, visto che di default l'interfaccia è in inglese, ci sono alcuni voci/titoli di menu che potresti voler tradurre. Per farlo, basta modificare i valori di queste variabili CSS:
+Poi, visto che di default l'interfaccia è in inglese, ci sono alcuni voci/titoli di menu che potresti voler tradurre. Per farlo, basta modificare i valori di queste variabili CSS:
 ```css
 --videojs-plyr-quality-text: "Quality";
 --videojs-plyr-captions-text: "Captions";
 --videojs-plyr-audiotracks-text: "Audio track";
---videojs-plyr-disabled-text: "Disabled";
+--videojs-plyr-subtitles-disabled-text: "Disabled";
 --videojs-plyr-settings-text: "Settings";
+--videojs-plyr-playback-speed-text: "Speed";
 ```
 
-E questo è tutto!
+Infine, se stai usando la versione 8.9.0 o successiva di Video.js, consiglio di abilitare l'impostazione `enableSmoothSeeking` impostandola su `true`. In questo modo, quando si clicca e trascina sulla barra di progresso del video, il cursore di riproduzione seguirà il mouse in modo fluido, invece che a scatti come avviene di default.
+
+Puoi fare ciò durante l'inizializzazione del player:
+```js
+videojs("video", {
+    enableSmoothSeeking: true,
+});
+```
+Oppure programmaticamente:
+```js
+let player = videojs("video");
+player.options({ enableSmoothSeeking: true });
+```
+
+<br>
+<div align="center"><i>Senza enableSmoothSeeking</i></div>
+<img src="seeking.gif">
+<br><br>
+<div align="center"><i>Con enableSmoothSeeking</i></div>
+<img src="smoothseeking.gif">
+<br><br>
+<b>E questo è tutto!</b>
 
 ## Varianti
 La cartella `css` contiene 4 file CSS, ovvero le versioni normali e "legacy" della libreria, sia in formato non minificato che minificato. La versione legacy supporta molto meglio i browser più veccho, ma è un po' più pesante (perché viene realizzata da postcss-preset-env con una query Browserslist di `> 0%`).
