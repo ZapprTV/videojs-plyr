@@ -161,7 +161,9 @@
     visibility: visible !important;
 }
 .vjs-theme-plyr:not(.vjs-thumbnails-ready) .vjs-time-tooltip {
-    right: -24px !important;
+    right: 100% !important;
+    transform: translateX(50%);
+    line-height: 1;
 }
 .vjs-theme-plyr .vjs-progress-control:hover .vjs-progress-holder:focus .vjs-mouse-display, .vjs-theme-plyr .vjs-progress-control:hover .vjs-mouse-display, .vjs-theme-plyr.vjs-scrubbing.vjs-touch-enabled .vjs-mouse-display {
     transform: translateY(-0.25em) scale(1) !important;
